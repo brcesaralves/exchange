@@ -3,8 +3,9 @@ package br.com.jaya.exchange.dto.requests;
 
 import java.io.Serializable;
 
-import org.springframework.beans.factory.annotation.Value;
+import javax.validation.constraints.NotNull;
 
+import br.com.jaya.exchange.enums.Currencies;
 import lombok.Data;
 
 @Data
@@ -12,6 +13,7 @@ public class ExchangeRequest implements Serializable {
 
      private static final long serialVersionUID = -5040604137460667518L;
 
-     @Value("${url.exchange.rate.api}")
-     private String url;
+     @NotNull
+     private Currencies Currency;
+
 }

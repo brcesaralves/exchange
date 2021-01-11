@@ -10,9 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class ExchangeResponse implements Serializable {
+public class TransactionResponse implements Serializable {
 
-     private static final long serialVersionUID = -7224667428067294214L;
+     private static final long serialVersionUID = 2951238838696823508L;
 
      @JsonProperty("transactionId")
      private Long id;

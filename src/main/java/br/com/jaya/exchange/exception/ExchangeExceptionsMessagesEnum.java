@@ -13,11 +13,13 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public enum ExchangeExceptionsMessagesEnum {
 
-     GLOBAL_SERVER_ERROR(INTERNAL_SERVER_ERROR.value(), "Global server error", ExchangeServerErrorException.class),
+     GLOBAL_SERVER_ERROR(INTERNAL_SERVER_ERROR.value(), "global server error", ExchangeServerErrorException.class),
 
-     USER_NOT_FOUND(NOT_FOUND.value(), "User not found", ExchangeNotFoundException.class),
+     USER_NOT_FOUND(NOT_FOUND.value(), "user not found", ExchangeNotFoundException.class),
 
-     ERROR_CONSUMER_EXCHANGE_RATE_API(BAD_REQUEST.value(), "global_recurso_nao_disponivel_emissor", ExchangeBadRequestException.class);
+     TRANSACTION_NOT_FOUND(NOT_FOUND.value(), "transaction not found", ExchangeNotFoundException.class),
+
+     ERROR_CONSUMER_EXCHANGE_RATE_API(BAD_REQUEST.value(), "external API call error", ExchangeBadRequestException.class);
 
      @Getter
      private Integer codigo;
