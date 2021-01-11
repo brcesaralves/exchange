@@ -42,7 +42,7 @@ public class ExchangeResource {
      }
 
      @PostMapping()
-     @ApiOperation(value = "List rates", notes = "This feature allows you to list rates.", response = ExchangeResponse.class, nickname = "exchange")
+     @ApiOperation(value = "Exchange", notes = "This feature allows you to convert between currencies.", response = ExchangeResponse.class, nickname = "exchange")
      public ResponseEntity<ExchangeResponse> exchange(
                @Validated @RequestBody ExchangePersist exchangePersist) {
 

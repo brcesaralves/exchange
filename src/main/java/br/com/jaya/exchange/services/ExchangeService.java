@@ -4,6 +4,7 @@ package br.com.jaya.exchange.services;
 import static br.com.jaya.exchange.util.Constants.URL_EXCHANGE_RATE_API;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 import java.time.ZonedDateTime;
 
 import org.springframework.http.HttpEntity;
@@ -56,7 +57,6 @@ public class ExchangeService {
 
           try {
 
-               // response = restTemplate.getForObject("https://api.exchangeratesapi.io/latest?base=USD", RateResponse.class);
                response = restTemplate.exchange(uriComponentsBuilder.build().encode().toUri(), HttpMethod.GET, entity, RateResponse.class);
 
           } catch (HttpClientErrorException e) {
@@ -95,7 +95,7 @@ public class ExchangeService {
           Transaction transaction = new Transaction();
           transaction.setOriginCurrency(exchangePersist.getOriginCurrency().name());
           transaction.setOriginValue(exchangePersist.getOriginValue());
-          transaction.setRate(rate);
+          transaction.setRate(BigDecimal.ONE.divide(rate, MathContext.DECIMAL128));
           transaction.setTargetCurrency(exchangePersist.getTargetCurrency().name());
           transaction.setTargetValue(targetValue);
           transaction.setTimestamp(ZonedDateTime.now());
