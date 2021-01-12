@@ -12,7 +12,7 @@ public class Pageable extends PageRequest {
 
      public static final int PAGE_DEFAULT = 0;
 
-     public static final int LIMIT_DEFAULT = 50;
+     public static final int LIMIT_DEFAULT = 10;
 
      private Pageable(Integer page, Integer size, Sort sort) {
 
