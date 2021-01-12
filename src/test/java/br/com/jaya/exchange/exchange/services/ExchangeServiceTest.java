@@ -32,7 +32,7 @@ import br.com.jaya.exchange.dto.responses.RateResponse;
 import br.com.jaya.exchange.enums.Currencies;
 import br.com.jaya.exchange.services.ExchangeService;
 
-@RunWith(SpringRunner.class)
+//@RunWith(SpringRunner.class)
 public class ExchangeServiceTest {
 
 //     @InjectMocks
