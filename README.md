@@ -40,12 +40,12 @@ O REST Assured é uma biblioteca criada com o intuito de facilitar os testes de 
 
 Primeiro, clone o projeto e compile:
 
-```shell
+```console
 git clone https://github.com/brcesaralves/exchange.git
 ```
 
 No diretório raiz do projeto, execute o comando abaixo:
 
-```shell
+```console
 mvn spring-boot:run
 ```
