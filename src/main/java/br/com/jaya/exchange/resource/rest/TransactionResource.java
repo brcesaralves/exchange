@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(produces = MediaType.APPLICATION_JSON_VALUE, tags = { "Transaction" })
 @RestController
-@RequestMapping(path = "/api/v1/transactions", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/transactions", produces = MediaType.APPLICATION_JSON_VALUE)
 public class TransactionResource {
 
      private final TransactionService transactionService;
