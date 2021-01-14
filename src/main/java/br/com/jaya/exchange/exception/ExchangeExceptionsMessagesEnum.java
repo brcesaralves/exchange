@@ -19,6 +19,8 @@ public enum ExchangeExceptionsMessagesEnum {
 
      TRANSACTION_NOT_FOUND(NOT_FOUND.value(), "transaction not found", ExchangeNotFoundException.class),
 
+     ERROR_RESPONSE_EXCHANGE_RATE_API(BAD_REQUEST.value(), "external API response error", ExchangeBadRequestException.class),
+
      ERROR_CONSUMER_EXCHANGE_RATE_API(BAD_REQUEST.value(), "external API call error", ExchangeBadRequestException.class);
 
      @Getter
