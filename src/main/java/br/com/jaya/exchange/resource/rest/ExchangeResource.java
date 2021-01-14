@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Api(produces = MediaType.APPLICATION_JSON_VALUE, tags = { "Exchange" })
 @RestController
-@RequestMapping(value = "/api/v1/exchange", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/api/exchange", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ExchangeResource {
 
      private final ExchangeService exchangeService;

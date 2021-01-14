@@ -30,7 +30,7 @@ import io.swagger.annotations.ApiParam;
 
 @Api(produces = MediaType.APPLICATION_JSON_VALUE, tags = { "User" })
 @RestController
-@RequestMapping(path = "/api/v1/users", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/api/users", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserResource {
 
      private final UserService userService;
