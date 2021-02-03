@@ -32,10 +32,10 @@ jobs:
           path: staging
       - name: Login to Heroku Container registry
         env: 
-          HEROKU_API_KEY: dd3f739a-716d-4e78-9a5f-403143705357
+          HEROKU_API_KEY: xxxxxxxxxxxxxxxxx
         run: heroku container:login
       - name: Build and push
         env:
-          HEROKU_API_KEY: dd3f739a-716d-4e78-9a5f-403143705357
+          HEROKU_API_KEY: xxxxxxxxxxxxxxxxxxxxx
           HEROKU_APP_NAME: jaya-exchange-api
         run: heroku plugins:install java && heroku create --no-remote && heroku deploy:war staging/exchange-0.0.1-SNAPSHOT.war --app jaya-exchange-api
